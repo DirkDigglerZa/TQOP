@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <input type="file" id="file" />
+  <button id="read-file">Read File</button>
+
+  <script>
+    document.querySelector("#read-file").addEventListener('click', function() {
+      // no file selected to read
+      if(document.querySelector("#file").value == '') {
+        console.log('No file selected');
+        return;
+      }
+
+      var file = document.querySelector("#file").files[0];
+
+      var reader = new FileReader();
+
+    reader.onload = function(e) {
+      const buffer = e.target.result;
+      const first = new Uint32Array(buffer, 0, 3);
+      const headerVersionText = new Uint8Array(buffer, 4, 13);
+      const headerVersionValue = new Uint8Array(buffer, 17, 1);
+
+      console.log(first);
+      console.log(headerVersionText);
+      console.log(headerVersionValue);
+
+      const text = new TextDecoder().decode(headerVersionText);
+      console.log(first[0] + " " + text + " " + headerVersionValue[0]);
+    }
+
+    reader.onerror = function(e) {
+      console.log('Error : ' + e.type);
+    };
+
+    reader.readAsArrayBuffer(file);
+
+  });
+
+  </script>
+</body>
+</html>
