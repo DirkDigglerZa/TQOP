@@ -28,6 +28,14 @@
 
       const text = new TextDecoder().decode(headerVersionText);
       console.log(first[0] + " " + text + " " + headerVersionValue[0]);
+
+      const writeStream = streamSaver.createWriteStream('test.txt')
+      const encoder = new TextEncoder
+      let data = 'a'.repeat(1024)
+      let uint8array = encoder.encode(data + "\n\n")
+
+      writeStream.write(uint8array) // must be uInt8array
+      writeStream.close()
     }
 
     reader.onerror = function(e) {

@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --jwtb-colors-brand-200: #67e5ed;
+    --jwtb-colors-brand-400: #53dfeb;
+    --jwtb-colors-brand-600: #27afa7;
+    --jwtb-colors-brandAlpha-100: #53dfeb10;
+    --jwtb-colors-brandAlpha-300: #53dfeb30;
+    --jwtb-colors-brandAlpha-500: #53dfeb50;
+    --jwtb-colors-brandAlpha-700: #53dfeb70;
+    --jwtb-colors-brandAlpha-900: #53dfeb90;
+    --jwtb-colors-gray-700: #3c3f42;
+    --jwtb-colors-gray-800: #111214;
+    --jwtb-colors-gray-900: #070e13;
+    --jwtb-colors-blackAlpha-100: rgba(0, 0, 0, .06);
+    --jwtb-colors-blackAlpha-200: rgba(0, 0, 0, .08);
+    --jwtb-colors-blackAlpha-300: rgba(0, 0, 0, .16);
+    --jwtb-colors-blackAlpha-400: rgba(0, 0, 0, .24);
+    --jwtb-colors-blackAlpha-500: rgba(0, 0, 0, .36);
+    --jwtb-colors-blackAlpha-600: rgba(0, 0, 0, .48);
+    --jwtb-colors-blackAlpha-700: rgba(0, 0, 0, .64);
+    --jwtb-colors-blackAlpha-800: rgba(0, 0, 0, .8);
+    --jwtb-colors-blackAlpha-900: rgba(0, 0, 0, .92);
+}
+body {
+    background-color: rgb(31, 46, 46);
+    margin:0px;
+}
